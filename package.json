@@ -1,0 +1,68 @@
+{
+  "name": "doctrineuml",
+  "displayName": "DoctrineUML",
+  "description": "Doctrine To UML",
+  "publisher": "Florian Pasquet",
+  "author": {
+    "name": "Florian Pasquet"
+  },
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "categories": [
+    "Visualization"
+  ],
+  "keywords": [
+    "Doctrine",
+    "Symfony",
+    "UML",
+    "Database",
+    "Mermaid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mochafe/DoctrineUML"
+  },
+  "extensionDependencies": [
+    "bierner.markdown-mermaid"
+  ],
+  "activationEvents": [
+    "onLanguage:php",
+    "onCommand:doctrineuml.reload"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "doctrineuml.reload",
+        "title": "Reload DoctrineUML"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.72.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "glob": "^8.0.3"
+  },
+  "icon": "doctrineuml.png"
+}
