@@ -64,5 +64,5 @@
   "dependencies": {
     "glob": "^8.0.3"
   },
-  "icon": "doctrineuml.png"
+  "icon": "img/doctrineuml.png"
 }
